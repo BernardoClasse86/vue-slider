@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Slider</title>
+    <script src="https://kit.fontawesome.com/36a89bf28f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/app.css">
+
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+
+      <div class="carousel">
+
+        <div v-for="(slide, i) in images" class="slide-thumb slide-card" :class="{ 'active-slide': i === slideCounter }">
+
+          <img :src="slide.image"/>
+
+          <h5 class="my-card-title">{{ slide.title }}</h5>
+
+          <p class="my-card-text">{{ slide.text }}</p>
+
+          <button class="arrow arrow-right" @click="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+
+          <button class="arrow arrow-left" @click="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+
+        </div>
+    
+      </div>
+
+    </div>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>
