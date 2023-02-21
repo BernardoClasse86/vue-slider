@@ -16,7 +16,7 @@
 
       <div class="carousel">
 
-        <div v-for="(slide, i) in images" class="slide-thumb slide-card" :class="{ 'active-slide': i === slideCounter }">
+        <div v-for="(slide, i) in images" class="slide-thumb slide-card" :class="i === slideCounter ? 'active-slide' : ''">
 
           <img :src="slide.image"/>
 
